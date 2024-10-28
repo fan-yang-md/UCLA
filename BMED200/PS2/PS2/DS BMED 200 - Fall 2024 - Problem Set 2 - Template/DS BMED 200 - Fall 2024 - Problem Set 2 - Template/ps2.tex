@@ -1,0 +1,239 @@
+\documentclass[11pt]{article}
+\usepackage{course}
+\usepackage{mydef}
+\usepackage{comment}
+\begin{document}
+
+\ctitle{2}{Probability}{November 7th, 2024 at 11:59pm PST}
+
+\author{}
+\date{}
+\maketitle
+\ifsoln
+\else
+\section*{Submission instructions}
+\begin{itemize}
+\item 
+Submit your solutions electronically on the course Gradescope site as PDF files.
+
+\item 
+Submit through the BruinLearn course website under the Gradescope tab on the left. You can add yourself to the course Gradescope site by going to gradescope.com, clicking ``Add a course" and entering the following entry code: GPBBKD. 
+
+\item 
+Please provide short and concise answers. Long, cumbersome, or unclear answers will not be checked.
+
+\item 
+If you plan to typeset your solutions, please use the LaTeX solution template. If you plan to submit scanned handwritten solutions, please use a black pen on blank white paper and a high-quality scanner app.
+\end{itemize}
+
+\fi
+
+\newpage
+
+
+\section{Events \problemworth{10}}
+\be
+\item \problemworth{2} If we flip a coin 3 times, what is our sample space $\Omega$?
+\ifnotsolution{\vspace{4cm}}
+
+
+\item \problemworth{2} If we flip a coin 3 times, what is the complement of the set $A = \{HHH, HHT, HTH\}$? 
+\ifnotsolution{\vspace{4cm}}
+
+
+\item \problemworth{2}
+We flip a fair coin 3 times. Let $A = \{HHH, HHT, HTH, THH, TTH\}$ and $B = \{THT\}$ be two events, calculate $P(A\cap B)$.
+\ifnotsolution{\vspace{3cm}}
+
+
+\item \problemworth{2}
+We roll a fair 12-sided dice once. Let $A= \{1,2,5\}, B = \{1,3,5,6\}$ be two events, calculate $P(A\cup B)$.
+\ifnotsolution{\vspace{3cm}}
+
+
+\item \problemworth{2} We roll a fair 12-sided dice just once. Are the events $A= \{1,2,5,7,11,12\}, B = \{1,3,5,6\}$ independent?
+\ifnotsolution{\clearpage}
+
+
+\clearpage
+\ee
+
+
+
+
+\section{Density/Mass functions \problemworth{8}}
+\be
+\item \problemworth{4} Let $X$ be a random variable with a probability function defined by:
+\[
+P(X = 2) = 1/10, \quad P(X = 3) = 7/10, \quad P(X = 5) = 2/10
+\]
+Plot the CDF $F_X$. Use $F_X$ to find $P(2 < X \leq 4.8)$ and $P(2 \leq X \leq 4.8)$.
+\ifnotsolution{\vspace{7cm}}
+
+
+
+
+\item \problemworth{4} Is the following a valid PDF?
+\begin{equation}
+  f(x) =
+    \begin{cases}
+      0 & \text{if} \; x \leq 0\\
+      2e^{-2x} & \text{otherwise}
+    \end{cases}       
+\end{equation}
+\ifnotsolution{\clearpage}
+
+
+
+\ee
+
+
+
+\section{Joint and Conditional Probability \problemworth{8}}
+Consider a scenario where we repeatedly flip a coin with probability $p$ for heads (i.e., $P(X_i = H) = p$, where $X_i$ is the random variable representing the $i$-th flip). Assume different flips are independent. Please express each of your answers to the following questions as a function of $p$.
+\be
+\item \problemworth{2} Suppose we observe $x_1 = H, x_2 = H, x_3 = H, x_4 = H$ for the first four flips. Calculate the conditional probability of observing an $H$ on the fifth flip, that is, $P(X_5 = H \vert x_1 =H, x_2 =H, x_3 =H, x_4 =H)$. 
+\ifnotsolution{\vspace{3cm}}
+
+
+
+\item \problemworth{2} Suppose we flip the coin five times. Calculate the probability of observing the exact sequence $THTTH$.
+\ifnotsolution{\vspace{4cm}}
+
+
+
+\item \problemworth{2} Suppose we flip the coin five times. Calculate the probability of observing two heads and three tails across five flips.
+\ifnotsolution{\vspace{4cm}}
+
+
+
+\item \problemworth{2} Calculate the probability of observing at least three heads in a sequence of five coin flips.
+\ifnotsolution{\clearpage}
+
+
+
+\ee
+
+
+
+\section{Bayes Rule \problemworth{4}}
+\be
+\item \problemworth{4} Suppose there is a rare disease that can only be found in 0.1\% 0f the population. A company has developed a test with probability 0.96 for a \textit{true positive} result (true positive rate) and probability 0.03 for a \textit{false positive} result (false positive rate). If a person gets a positive result, what is the probability of them actually having the disease?
+
+\textbf{Recall:} The probability of a true positive result is the probability of receiving a positive result when the patient is indeed a case for the disease; the probability of a false positive result is the probability of receiving a positive result when the patient is in fact \underline{NOT} a case for the disease.
+\ifnotsolution{\vspace{6cm}}
+
+
+\ee
+
+
+
+\section{Marginal Probability \problemworth{4}}
+\be
+\item \problemworth{4} Let $X,Y$ be two random variables with the following joint density function:
+\begin{equation}
+  f(x,y) =
+    \begin{cases}
+      x^2+y^2 & \text{if} \; 0 \leq x \leq 1, 0 \leq y \leq 1\\
+      0 & \text{otherwise}
+    \end{cases}       
+\end{equation}
+Derive $f_Y(y)$, the marginal probability density function of $Y$.
+\ifnotsolution{\newpage}
+
+
+\ee
+
+
+
+\section{Covariance \problemworth{4}}
+Let $X,Y$ be two random variables with the following joint probability mass function:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c}
+\hline
+ $f(X,Y)$& $Y = 1$ & $Y = -1$ & $Y = 2$ & $Y = -2$\\
+\hline
+$X = -1$ & $0$ & $0$ & $\frac{1}{8}$ & $\frac{1}{8}$ \\
+\hline
+$X = 1$ &$\frac{1}{8}$ & $\frac{1}{8}$ & $0$ & $0$\\
+\hline
+$X = 2$ & $0$ & $0$ & $\frac{1}{8}$ & $\frac{1}{8}$ \\
+\hline
+$X = -2$ &$\frac{1}{8}$ & $\frac{1}{8}$ & $0$ & $0$\\
+\hline
+\end{tabular}
+\end{center}
+
+\be
+\item \problemworth{3} Calculate $\text{COV}(X,Y)$.
+\ifnotsolution{\vspace{5cm}}
+
+
+
+
+\item \problemworth{1} What is $P(X = 2)$? How about $P(X = 2\vert Y = -2)$? What can you conclude about the relationship between $X$ and $Y$? Are $X$ and $Y$ independent? 
+\ifnotsolution{\clearpage}
+
+\ee
+
+
+
+\section{Implementation: Multivariate Gaussian \problemworth{8}}
+\be
+\item \problemworth{3} Sample 1,000 values (i.e., 1,000 vectors of length 2) from the bi-variate standard normal distribution:
+$$\begin{pmatrix}X \\ Y\end{pmatrix} \sim \mathcal{N} \left(\begin{bmatrix}0 \\ 0\end{bmatrix}, \begin{bmatrix}1,0 \\ 0,1 \end{bmatrix} \right)$$
+Visualize the 1,000 values by a scatter plot (i.e., the values drawn from X on one axis and those drawn from Y on the second axis). (Hint: you can use the function \verb|numpy.random.multivariate_normal| in python or \verb|MASS::mvrnorm| in R.)
+\ifnotsolution{\vspace{10cm}}
+
+
+\item \problemworth{1} Calculate $P(X \geq 0)$ and $P(X \geq 0\, \vert\, Y \geq 0)$ based on the values you drew in (a) by calculating the frequencies of these cases in your 1,000 sampled values.
+\ifnotsolution{\clearpage}
+
+
+\item \problemworth{3}
+Sample 1,000 values (i.e., 1,000 vectors of length 2) from the following bi-variate normal distribution:
+$$\begin{pmatrix}X \\ Y\end{pmatrix} \sim \mathcal{N} \left(\begin{bmatrix}0 \\ 0\end{bmatrix}, \begin{bmatrix}1,0.6 \\ 0.6,1 \end{bmatrix} \right)$$ Visualize the 1,000 values by a scatter plot.
+\ifnotsolution{\vspace{10cm}}
+
+
+\item \problemworth{1} 
+Calculate $P(X \geq 0)$ and $P(X \geq 0\, \vert\, Y \geq 0)$ based on the values you drew in (a) by calculating the frequencies of these cases in your 1,000 sampled values.
+Based on what you observe, are $X$ and $Y$ independent? 
+\ifnotsolution{\clearpage}
+
+\ee
+
+
+
+\section{Implementation: Poisson and binomial \problemworth{8}}
+\be
+\item \problemworth{4} If $X \sim \textbf{Poisson} (\lambda_1)$ and $Y \sim \textbf{Poisson} (\lambda_2)$ are two independent random variables, then their sum $Z = X+Y$ satisfies: $Z\sim \textbf{Poisson} (\lambda_1 + \lambda_2)$.
+
+We shall verify this relation empirically. Let $X\sim \textbf{Poisson}(\lambda_1 = 2), \; Y\sim \textbf{Poisson}(\lambda_2 = 8)$. First, draw $10^{6}$ pairs of values from $X,Y$ and use their sums to construct each pair's corresponding value of $Z$. In addition, draw a second sample of $10^6$ values directly from $\Tilde{Z} \sim \textbf{Poisson}(\lambda = \lambda_1+ \lambda_2 = 10)$. Compare the distribution of the values from our constructed $Z$ with the distribution of the values from $\Tilde{Z}$ by plotting the histogram of each of the two samples (both histograms in the same figure). Comment on the similarity or dissimilarity of the histograms.
+\ifnotsolution{\clearpage}
+
+
+\item \problemworth{4} If $X \sim \textbf{Poisson} (\lambda_1)$ and $Y \sim \textbf{Poisson} (\lambda_2)$ are two independent random variables, then the conditional distribution of $X$ given $X + Y = t$ follows $\textbf{Binomial}(t, p)$ where $p = \lambda_1 / (\lambda_1 + \lambda_2)$. 
+
+We shall verify this relation empirically. Our conditional distribution criterion (i.e. $X + Y = t$) can be met by stratifying the data used in part (a) to pairs that sum up to precisely $t$. We will arbitrarily pick $t = 20$ in this exercise. In addition, draw the same amount of values directly from the desired Binomial distribution $\Tilde{X} \sim \textbf{Binomial}(t = 20, \; p = \lambda_1 / (\lambda_1 + \lambda_2) = 1/5)$. Compare the two sets of values by plotting the histogram of each set. Comment on the similarity or dissimilarity of the histograms.
+
+% \ifsolution{
+% \item \problemworth{0} We will next show that the distribution of $X$ given $X + Y = t$ is \textbf{Binomial}(t, p) where $p = \lambda_1 / (\lambda_1 + \lambda_2)$. Complete the following proof. 
+
+% Set $\lambda_3 = \lambda_1 + \lambda_2$
+% \begin{eqnarray*}
+% P(X = x \vert X + Y = t) &=& \frac{P(X = x, X + Y = t)}{P(X + Y = t)} \\
+% &=& \frac{P(X = x, x + Y = t)}{P(X + Y = t)} \\
+% &=& \frac{P(X = x)P(Y = t - x)}{P(X + Y = t)} \\
+% &=& \frac{\lambda_1^x e^{-\lambda_1}}{x!} \cdot \frac{\lambda_2^{t-x} e^{-\lambda_2}}{(t-x)!} \cdot \left( \frac{\lambda_3^{t} e^{-\lambda_3}}{t!}\right)^{-1}\\
+% &=& \frac{t!}{x!(t-x)!} \cdot \frac{\lambda_1^{x} \lambda_2^{t-x}}{\lambda_3^t}\\
+% &=& {t \choose x} \cdot \frac{\lambda_1^{x}}{\lambda_3^x } \cdot \frac{ \lambda_2^{t-x} }{\lambda_3^{t-x}}\\
+% &=& {t \choose x} \cdot \left(\frac{\lambda_1}{\lambda_1 + \lambda_2}\right)^x \cdot \left(\frac{\lambda_2}{\lambda_1 + \lambda_2}\right)^{t-x} \\
+% &=& {t \choose x} \cdot \left(p\right)^x \cdot \left(1-p\right)^{t-x} \\
+% &=& \textbf{Binomial}(x \,;\, t, p)
+% \end{eqnarray*}
+% }
+
+\ee
+\end{document}
